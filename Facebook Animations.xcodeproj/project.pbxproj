@@ -13,6 +13,11 @@
 		7BA4902A1A012156008B2519 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA490291A012156008B2519 /* Images.xcassets */; };
 		7BA4902D1A012156008B2519 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA4902B1A012156008B2519 /* LaunchScreen.xib */; };
 		7BA490391A012156008B2519 /* Facebook_AnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA490381A012156008B2519 /* Facebook_AnimationsTests.swift */; };
+		7BA490431A01264F008B2519 /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA490421A01264F008B2519 /* RequestsViewController.swift */; };
+		7BA490451A01282F008B2519 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA490441A01282F008B2519 /* FeedViewController.swift */; };
+		7BA490471A01295E008B2519 /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA490461A01295E008B2519 /* HomeFeedViewController.swift */; };
+		7BA490491A0129E3008B2519 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA490481A0129E3008B2519 /* NotificationsViewController.swift */; };
+		7BA4904B1A012A78008B2519 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4904A1A012A78008B2519 /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		7BA490321A012156008B2519 /* Facebook AnimationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Facebook AnimationsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA490371A012156008B2519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BA490381A012156008B2519 /* Facebook_AnimationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook_AnimationsTests.swift; sourceTree = "<group>"; };
+		7BA490421A01264F008B2519 /* RequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsViewController.swift; sourceTree = "<group>"; };
+		7BA490441A01282F008B2519 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		7BA490461A01295E008B2519 /* HomeFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
+		7BA490481A0129E3008B2519 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		7BA4904A1A012A78008B2519 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,7 @@
 		7BA490141A012156008B2519 = {
 			isa = PBXGroup;
 			children = (
+				7BA490441A01282F008B2519 /* FeedViewController.swift */,
 				7BA4901F1A012156008B2519 /* Facebook Animations */,
 				7BA490351A012156008B2519 /* Facebook AnimationsTests */,
 				7BA4901E1A012156008B2519 /* Products */,
@@ -80,6 +91,10 @@
 				7BA490221A012156008B2519 /* AppDelegate.swift */,
 				7BA490241A012156008B2519 /* ViewController.swift */,
 				7BA490261A012156008B2519 /* Main.storyboard */,
+				7BA4904A1A012A78008B2519 /* MoreViewController.swift */,
+				7BA490481A0129E3008B2519 /* NotificationsViewController.swift */,
+				7BA490461A01295E008B2519 /* HomeFeedViewController.swift */,
+				7BA490421A01264F008B2519 /* RequestsViewController.swift */,
 				7BA490291A012156008B2519 /* Images.xcassets */,
 				7BA4902B1A012156008B2519 /* LaunchScreen.xib */,
 				7BA490201A012156008B2519 /* Supporting Files */,
@@ -212,8 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA4904B1A012A78008B2519 /* MoreViewController.swift in Sources */,
 				7BA490251A012156008B2519 /* ViewController.swift in Sources */,
+				7BA490431A01264F008B2519 /* RequestsViewController.swift in Sources */,
+				7BA490451A01282F008B2519 /* FeedViewController.swift in Sources */,
+				7BA490491A0129E3008B2519 /* NotificationsViewController.swift in Sources */,
 				7BA490231A012156008B2519 /* AppDelegate.swift in Sources */,
+				7BA490471A01295E008B2519 /* HomeFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +425,7 @@
 				7BA4903E1A012156008B2519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BA4903F1A012156008B2519 /* Build configuration list for PBXNativeTarget "Facebook AnimationsTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +434,7 @@
 				7BA490411A012156008B2519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -18,6 +18,7 @@
 		7BA490471A01295E008B2519 /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA490461A01295E008B2519 /* HomeFeedViewController.swift */; };
 		7BA490491A0129E3008B2519 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA490481A0129E3008B2519 /* NotificationsViewController.swift */; };
 		7BA4904B1A012A78008B2519 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4904A1A012A78008B2519 /* MoreViewController.swift */; };
+		7BA4904D1A012F7F008B2519 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4904C1A012F7F008B2519 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		7BA490461A01295E008B2519 /* HomeFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
 		7BA490481A0129E3008B2519 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		7BA4904A1A012A78008B2519 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		7BA4904C1A012F7F008B2519 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				7BA490221A012156008B2519 /* AppDelegate.swift */,
 				7BA490241A012156008B2519 /* ViewController.swift */,
 				7BA490261A012156008B2519 /* Main.storyboard */,
+				7BA4904C1A012F7F008B2519 /* PhotoViewController.swift */,
 				7BA4904A1A012A78008B2519 /* MoreViewController.swift */,
 				7BA490481A0129E3008B2519 /* NotificationsViewController.swift */,
 				7BA490461A01295E008B2519 /* HomeFeedViewController.swift */,
@@ -232,6 +235,7 @@
 				7BA490431A01264F008B2519 /* RequestsViewController.swift in Sources */,
 				7BA490451A01282F008B2519 /* FeedViewController.swift in Sources */,
 				7BA490491A0129E3008B2519 /* NotificationsViewController.swift in Sources */,
+				7BA4904D1A012F7F008B2519 /* PhotoViewController.swift in Sources */,
 				7BA490231A012156008B2519 /* AppDelegate.swift in Sources */,
 				7BA490471A01295E008B2519 /* HomeFeedViewController.swift in Sources */,
 			);

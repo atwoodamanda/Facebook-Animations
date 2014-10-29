@@ -103,6 +103,15 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_feed" id="pAp-X5-DMY">
                                         <rect key="frame" x="0.0" y="110" width="320" height="1438"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding1" id="wd3-zB-Zwi">
+                                        <rect key="frame" x="5" y="194" width="153" height="153"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="f12-b2-G2S" appends="YES" id="Fjs-fR-5XD"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                             </scrollView>
@@ -112,11 +121,62 @@
                     <tabBarItem key="tabBarItem" title="News Feed" image="feed_tab" id="k1Z-0K-I2x"/>
                     <connections>
                         <outlet property="scrollView" destination="YqU-Qd-rOC" id="ide-mr-crH"/>
+                        <segue destination="cGW-yS-4Yx" kind="modal" identifier="imageSegue" modalTransitionStyle="crossDissolve" id="jlH-W8-4tB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woZ-aK-jG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="f12-b2-G2S">
+                    <connections>
+                        <action selector="onPhotoTap:" destination="P1o-NA-AUV" id="CcN-XW-3QR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-647" y="781"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="fFU-ef-3Jy">
+            <objects>
+                <viewController id="cGW-yS-4Yx" customClass="PhotoViewController" customModule="Facebook_Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="asW-jQ-zMb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="iOb-kD-mKi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="doneButton" id="1hf-Jr-qNf">
+                                        <rect key="frame" x="261" y="17" width="51" height="27"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="photo_actions" id="QWn-DI-PPc">
+                                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Ssq-2R-NXq">
+                                        <rect key="frame" x="0.0" y="45" width="320" height="480"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.54412539699999996" green="1" blue="0.55996815170000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gky-T9-Wg4">
+                                        <rect key="frame" x="261" y="17" width="51" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onDoneButton:" destination="cGW-yS-4Yx" eventType="touchUpInside" id="va6-rF-xqC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yN-ex-1SV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-647" y="1507"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="KKE-04-TTi">
@@ -219,6 +279,7 @@
     </scenes>
     <resources>
         <image name="compose" width="320" height="46"/>
+        <image name="doneButton" width="51" height="27"/>
         <image name="feed_tab" width="27" height="27"/>
         <image name="home_feed" width="320" height="1438"/>
         <image name="messages" width="320" height="460"/>
@@ -228,8 +289,10 @@
         <image name="notifications" width="320" height="818"/>
         <image name="notifications_tab" width="27" height="27"/>
         <image name="people" width="320" height="1006"/>
+        <image name="photo_actions" width="320" height="44"/>
         <image name="requests_tab" width="27" height="27"/>
         <image name="settings" width="320" height="1800"/>
+        <image name="wedding1" width="320" height="480"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

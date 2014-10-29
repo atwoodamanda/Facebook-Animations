@@ -1,5 +1,5 @@
 //
-//  HomeFeedViewController.swift
+//  PhotoViewController.swift
 //  Facebook Animations
 //
 //  Created by Amanda Atwood on 10/29/14.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class HomeFeedViewController: UIViewController {
+class PhotoViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize = CGSize(width: 320, height: 1548)
 
         // Do any additional setup after loading the view.
     }
@@ -25,9 +22,9 @@ class HomeFeedViewController: UIViewController {
     }
     
 
-    @IBAction func onPhotoTap(sender: AnyObject) {
-        performSegueWithIdentifier("imageSegue", sender: self)
-    }
 
+    @IBAction func onDoneButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }

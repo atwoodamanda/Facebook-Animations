@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="-271" y="781"/>
         </scene>
-        <!--News Feed-->
+        <!--Home Feed View Controller-->
         <scene sceneID="Cm6-dS-CSD">
             <objects>
-                <viewController id="P1o-NA-AUV" customClass="HomeFeedViewController" customModule="Facebook_Animations" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P1o-NA-AUV" userLabel="Home Feed View Controller" customClass="HomeFeedViewController" customModule="Facebook_Animations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kz6-Wr-vB7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,6 +120,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="News Feed" image="feed_tab" id="k1Z-0K-I2x"/>
                     <connections>
+                        <outlet property="imageView" destination="wd3-zB-Zwi" id="Y8Z-nF-lIg"/>
                         <outlet property="scrollView" destination="YqU-Qd-rOC" id="ide-mr-crH"/>
                         <segue destination="cGW-yS-4Yx" kind="modal" identifier="imageSegue" modalTransitionStyle="crossDissolve" id="jlH-W8-4tB"/>
                     </connections>
@@ -173,6 +174,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ssq-2R-NXq" id="Vyw-t8-Hbl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yN-ex-1SV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

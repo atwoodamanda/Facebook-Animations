@@ -12,8 +12,13 @@ class HomeFeedViewController: UIViewController, UIViewControllerTransitioningDel
     
     var isPresenting: Bool = true
 
+    @IBOutlet weak var imageView5: UIImageView!
+    @IBOutlet weak var imageView4: UIImageView!
+    @IBOutlet weak var imageView3: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    var tappedImage: UIImageView!
     var photoInitialCenter: CGPoint!
     
     override func viewDidLoad() {
@@ -32,12 +37,12 @@ class HomeFeedViewController: UIViewController, UIViewControllerTransitioningDel
         var toViewController = segue.destinationViewController as PhotoViewController
         toViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
         toViewController.transitioningDelegate = self
-        toViewController.image = self.imageView.image
+        toViewController.image = self.tappedImage.image
         
     }
 
-    @IBAction func onPhotoTap(sender: AnyObject) {
-        
+    @IBAction func onPhotoTap(sender: UITapGestureRecognizer) {
+        tappedImage = sender.view as UIImageView
         
         performSegueWithIdentifier("imageSegue", sender: self)
     }
@@ -71,9 +76,9 @@ class HomeFeedViewController: UIViewController, UIViewControllerTransitioningDel
             toViewController.view.alpha = 0
             
             var window = UIApplication.sharedApplication().keyWindow
-            var bigPhoto = UIImageView(frame: imageView.frame)
-            bigPhoto.image = imageView.image
-            bigPhoto.contentMode = imageView.contentMode
+            var bigPhoto = UIImageView(frame: tappedImage.frame)
+            bigPhoto.image = tappedImage.image
+            bigPhoto.contentMode = tappedImage.contentMode
             window.addSubview(bigPhoto)
 
             
@@ -102,7 +107,7 @@ class HomeFeedViewController: UIViewController, UIViewControllerTransitioningDel
             smallPhoto.hidden = false
             
             UIView.animateWithDuration(0.4, animations: { () -> Void in
-                smallPhoto.frame = self.imageView.frame
+                smallPhoto.frame = self.tappedImage.frame
                 fromViewController.view.alpha = 0
                 
                 

@@ -57,7 +57,7 @@ class HomeFeedViewController: UIViewController, UIViewControllerTransitioningDel
         return 0.4
     }
     
-        func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         println("animating transition")
         var containerView = transitionContext.containerView()
         var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
@@ -67,7 +67,6 @@ class HomeFeedViewController: UIViewController, UIViewControllerTransitioningDel
             containerView.addSubview(toViewController.view)
             
             var photoVC = toViewController as PhotoViewController
-            imageView.hidden = true
             photoVC.imageView.hidden = true
             toViewController.view.alpha = 0
             
@@ -89,13 +88,29 @@ class HomeFeedViewController: UIViewController, UIViewControllerTransitioningDel
             
             
         } else {
+            println(toViewController)
+            var photoVC = fromViewController as PhotoViewController
+            //var feedVC = toViewController as HomeFeedViewController
+            var window = UIApplication.sharedApplication().keyWindow
+            //imageView.hidden = true
+            //feedVC.imageView.hidden = true
             
+            var smallPhoto = UIImageView(frame: photoVC.imageView.frame)
+            smallPhoto.image = photoVC.imageView.image
+            smallPhoto.contentMode = photoVC.imageView.contentMode
+            window.addSubview(smallPhoto)
+            smallPhoto.hidden = false
             
             UIView.animateWithDuration(0.4, animations: { () -> Void in
+                smallPhoto.frame = self.imageView.frame
                 fromViewController.view.alpha = 0
+                
+                
                 }) { (finished: Bool) -> Void in
-                    transitionContext.completeTransition(true)
+                    smallPhoto.removeFromSuperview()
+                   // feedVC.imageView.hidden = false
                     fromViewController.view.removeFromSuperview()
+                    transitionContext.completeTransition(true)
             }
         }
     }

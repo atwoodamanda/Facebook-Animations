@@ -122,7 +122,7 @@
                     <connections>
                         <outlet property="imageView" destination="wd3-zB-Zwi" id="Y8Z-nF-lIg"/>
                         <outlet property="scrollView" destination="YqU-Qd-rOC" id="ide-mr-crH"/>
-                        <segue destination="cGW-yS-4Yx" kind="modal" identifier="imageSegue" modalTransitionStyle="crossDissolve" id="jlH-W8-4tB"/>
+                        <segue destination="cGW-yS-4Yx" kind="modal" identifier="imageSegue" id="QtU-Xf-tBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woZ-aK-jG5" userLabel="First Responder" sceneMemberID="firstResponder"/>

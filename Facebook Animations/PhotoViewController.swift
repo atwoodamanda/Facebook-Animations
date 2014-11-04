@@ -39,11 +39,15 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         var number = 1 - abs(scrollView.contentOffset.y/100)
-        println(number)
+        println(scrollView.contentOffset.y)
         photoActions.alpha = number
         doneButton.alpha = 0.0001
         backgroundView.alpha = number
-        if
+        if scrollView.contentOffset.y > 100.0 {
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            scrollView.contentOffset.y == 0.0
+        }
     }
     
 

@@ -198,6 +198,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" id="mGw-Nh-9WO">
+                                <rect key="frame" x="0.0" y="-4" width="320" height="576"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="iOb-kD-mKi">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,10 +233,13 @@
                                 </subviews>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="mGw-Nh-9WO" id="BGE-bL-zmd"/>
+                        <outlet property="doneButton" destination="1hf-Jr-qNf" id="SdG-dd-ApZ"/>
                         <outlet property="imageView" destination="Ssq-2R-NXq" id="Vyw-t8-Hbl"/>
+                        <outlet property="photoActions" destination="QWn-DI-PPc" id="CFs-29-Ol2"/>
+                        <outlet property="scrollView" destination="iOb-kD-mKi" id="UzF-rw-43B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yN-ex-1SV" userLabel="First Responder" sceneMemberID="firstResponder"/>

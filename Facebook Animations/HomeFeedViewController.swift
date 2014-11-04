@@ -14,6 +14,7 @@ class HomeFeedViewController: UIViewController, UIViewControllerTransitioningDel
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    var photoInitialCenter: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +35,9 @@ class HomeFeedViewController: UIViewController, UIViewControllerTransitioningDel
         toViewController.image = self.imageView.image
         
     }
-    
 
     @IBAction func onPhotoTap(sender: AnyObject) {
+        
         
         performSegueWithIdentifier("imageSegue", sender: self)
     }
@@ -64,13 +65,32 @@ class HomeFeedViewController: UIViewController, UIViewControllerTransitioningDel
         
         if (isPresenting) {
             containerView.addSubview(toViewController.view)
+            
+            var photoVC = toViewController as PhotoViewController
+            imageView.hidden = true
+            photoVC.imageView.hidden = true
             toViewController.view.alpha = 0
+            
+            var window = UIApplication.sharedApplication().keyWindow
+            var bigPhoto = UIImageView(frame: imageView.frame)
+            bigPhoto.image = imageView.image
+            bigPhoto.contentMode = imageView.contentMode
+            window.addSubview(bigPhoto)
+
+            
             UIView.animateWithDuration(0.4, animations: { () -> Void in
+                bigPhoto.frame = photoVC.imageView.frame
                 toViewController.view.alpha = 1
-                }) { (finished: Bool) -> Void in
-                    transitionContext.completeTransition(true)
-            }
+                }, completion: { (finished: Bool) -> Void in
+                bigPhoto.removeFromSuperview()
+                photoVC.imageView.hidden = false
+                transitionContext.completeTransition(true)
+            })
+            
+            
         } else {
+            
+            
             UIView.animateWithDuration(0.4, animations: { () -> Void in
                 fromViewController.view.alpha = 0
                 }) { (finished: Bool) -> Void in
